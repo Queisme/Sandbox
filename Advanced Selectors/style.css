@@ -1,0 +1,16 @@
+* {
+  background-color: rgb(8, 8, 8);
+  color:rgb(250, 250, 250);
+}
+
+.emojify::before {
+  content: '😎 🥸 🤓';
+}
+
+.emojify::after {
+  content: '🤓 🥸 😎';
+}
+
+span {
+  background-color: rgb(82, 82, 82);
+}

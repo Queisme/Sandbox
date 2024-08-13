@@ -11,6 +11,106 @@
     <h1>Advanced Selectors</h1>
     <h2>Intermediate HTML and CSS Course</h2>
   </hgroup>
+  <ol>
+    <li>Understand how to use parent & sibling selectors</li>
+    <li>Recognize the difference between pseudo classes & pseuo elements</li>
+    <li>Learn about the ost useful & common pseudo elements & pseudo classes</li>
+    <li>Learn about the different ways to select an attribute or its parts</li>
+  </ol>
+
+  <ul><p><strong>Child and sibiling combinators</strong></p>
+    <li>'>' - the child combinator</li>
+    <li>'+' - the adjacent sibling combinator</li>
+    <li>'~' - the general sibling combinator</li>
+  </ul>
+
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">MDN's docs on pseudo-classes</a></p>
+  <ul>
+    <li>:focuse - applies to an element that is currently selected by the user either through their cursor or keyboard</li>
+    <li>:hover - affects anything under the user's mouse pointer</li>
+    <li>:active - applies to elements that are currently being clicked</li>
+    <li>:link - to implement your own custom styling for links</li>
+    <li>:visited - to implement you own custom styling for visited links</li>
+  </ul>
+  <br>
+  <ul><p><strong>Structural pseudo-classes</strong></p>
+    <li>
+      :root - is a special class that represents the very top level of your document - the one element that has no parents. Generally when working with the web, this is equivalent to the 'html' element, but there are a few subtle difference between :root and html. :root is generally where you will place your 'global' CSS rules.
+    </li>
+      <ul>
+        <li>:root - as a pseudo class has a greater specificity than html</li>
+        <li>another pseudo class won't be affected by :root but specifying html will affect everything within the html, even other pseudo classes</li>
+        <li>For HTML docs, there is no difference - your root element is the 'html' tag. However, you can apply CSS not only to HTML, but all XML-like documents. That's why :root is there - to target the document's root element regardless of document type. Most people are confused by the difference because the overwhelmingly predominant use case for CSS is styling HTML docs. EX: You can style SVG docs with CSS. When styling SVG, your root element will not be html but svg. <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element">SVG tags</a></li>
+      </ul>
+    <li>:first-child and :last-child - will match elements that are the first or last sibling.</li>
+    <li>:empty - will match elements that have no children at all</li>
+    <li>:only-child - will match elements that don't have any siblings</li>
+    <li>:nth-child - gives a more dynamic approach</li>
+  </ul>
+
+  <ul><p><strong>Pseudo-Elements</strong></p>
+    <p>While pseudo-classes give us an alternative way to interact with our HTML elements based on their state or structure, pseudo-elements are more abstract, allowing us to affect parts of our HTML that aren't elements at all.</p>
+    <li>::marker - allows customizing the styling of you 'li' elements' bullets or numbers.</li>
+    <li>::first-letter and ::first-line - allow you to give special styling to the first letter or line of text.</li>
+    <li>::selection allows you to change the highlighting when a user selects text on the page.</li>
+    <li>::before & ::after - allow you to add extra elements onto the page with CSS instead of HTML. Used to decorate text in various ways is one common use case.</li>
+    <li>List of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element docs</a></li>
+  </ul>
+
+
+  <div> Let's <span class="emojify">emojify</span>this span!</div>
+
+  <ul><p><strong>Attribute selectors</strong></p>
+    <p>An attribute is anything in the opening tag of an HTML element - such as 'src="picture.jpg"' or href="www.theodinproject.com"</p>
+    <p>Since we write our own values for attributes, we need a slightly more flecible system to be able to target specific values.</p>
+    <li>[attribute] - This general selector will select anything where the given attribute exists. Value doesn't matter.</li>
+    <li>selector[attribute] - Optionally we can combine our attribute selectors with other types of selectors, such as class or element selectors.</li>
+    <li>[attribute="value"] - To get really specific, we can us '=' to match a specific attribute with a specific value.</li>
+    <ul>
+      <li>
+        [attribute^="value"] - ^= Will match strings from the start.
+      </li>
+      <li>
+        [attribute$="value"] - $= Will match strings from the end.
+      </li>
+      <li>
+        [attribute*="value"] - *= The wildcard selector will match anywhere inside the string.
+      </li>
+      <span><p>EXAMPLE:</p>
+      [class^='aus'] {<br>
+        /* Classes are attributes too!<br>
+          This will target any class that begins with 'aus':<br>
+          class='austria'<br>
+          class='australia'<br>
+        */<br>
+      }<br>
+      <br>      
+      [src$='.jpg'] {<br>
+        /* This will target any src attribute that ends in '.jpg':<br>
+        src='puppy.jpg'<br>
+        src='kitten.jpg'<br>
+        */<br>
+      }<br>
+      <br>
+      [for*='ill'] {<br>
+        /* This will target any for attribute that has 'ill' anywhere inside it:<br>
+        for="bill"<br>
+        for="jill"<br>
+        for="silly"<br>
+        for="ill"<br>
+        */<br>
+      }<br>
+      </span>
+    </ul>
+  </ul>
+
+
+
+
+
+
+
+
   <script src="script.js"></script>
 </body>
 </html>
