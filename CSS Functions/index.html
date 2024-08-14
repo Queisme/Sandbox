@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CSS Functions</title>
+</head>
+<body>
+  <hgroup>
+    <h1>CSS Functions</h1>
+    <h2>Intermediate HTML and CSS Course </h2>
+  </hgroup>
+
+  <ul><p><strong>CSS Functions</strong></p>
+    <li><p>Functions in CSS are reuseable pieces of code which perform specific tasks. Functions are passed 'arguments' between parentheses.<br>
+      Ex.<br>
+       'color: rgb(0, 42, 255);'<br>
+       'background: linear-gradient(90deg, blue, red);'<br>
+    </p></li>
+    <li><p>CSS does <strong>NOT</strong> allow us to create our own functions. The language comes with a list of premade functions.
+      <ul><p><em>Some of the premade CSS functions</em></p>
+        <li>calc()</li>
+        <li>min()</li>
+        <li>max()</li>
+        <li>clamp()</li>
+      </ul>
+    </p></li>
+    <li><p><em>Examples of CSS variables</em></p>
+      <ul>
+        <li><p><strong>calc()</strong></p>
+          --header: 3rem;<br>
+          --footer: 40px;<br>
+          --main: calc(100vh - calc(var(--header) + var(--footer)));<br><br>
+        --header, --footer, and --main are all examples of <strong>CSS variables</strong><br>
+        main = 100vh - (header + footer)<br>
+        calc() is handing the math even with mixed vh, rem, and px units.
+        <li><p><strong>min()</strong></p>
+          width: min(150px, 100%);<br>
+          height: min(150px, 100%);<br>
+          <p>If there are 150px available to the image, it will take up all 150px. If there are not 150px available, the image will switch to 100% of the parent’s width.<br>
+          You can also do basic math inside min().<br>width: min(80ch, 100vw - 2rem);<br>
+        </p></li>
+        <li><p><strong>max()</strong></p>
+          <p>works the same way as min, only in reverse. It will select the largest possible value from within the parenthese.<br>
+          The max function is most useful when the viewing window is either exceptionally small, or the user increases the content size by using the browser’s zoom feature. You may not find a lot of use for max at first, but it is a good tool to be aware of for projects where accessibility is important.<br>        
+        </p></li>
+        <li><p><strong>clamp()</strong></p>
+          clamp() makes elements fluid and responsive.<br>
+          font-size: clamp(320px, 80vw, 60rem);<br><br>
+          <ol>
+            <ul>the smallest value (320px)</ul>
+            <ul>the ideal value (80vw)</ul>
+            <ul>the largest value (60rem)</ul>
+            <br>
+          </ol>
+        </li>
+      </li>
+      </ul>
+
+    </li>
+  </ul>
+  <script src="script.js"></script>
+</body>
+</html>

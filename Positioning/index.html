@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Positioning</title>
+</head>
+<body>
+  <h1>Positioning</h1>
+  <div class="parent">
+    Parent
+    <div class="child-one child">One</div>
+    <div class="child-two child">Two</div>
+    <div class="child-three child">Three</div>
+  </div>
+
+  <h2>Positioning</h2>
+  <ol>
+    <li>Static - the default position</li>
+    <li>Relative - same as static but you can add top, right, bottom, left making it move relative to it's normal position</li>
+    <li>Absolute - Removes from the flow and positions absolute to the parent. Parent has to be relative, absolute, sticky, or fixed position for top, right, button, left to work else it considers the main html element as the parent</li>
+    <li>Fixed - fixed to a place. Doesn't give two shits about the parent. Always considers html element the parent. Stays there when scrolled.</li>
+    <li>Stick - relative - when normal + fixed - when scrolled. The values for top, right, bottom, left become active when scrolled.</li>
+  </ol>
+  
+  <script src="script.js"></script>
+</body>
+</html>
