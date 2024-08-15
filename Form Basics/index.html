@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form Basics</title>
+</head>
+<body>
+  <hgroup>
+    <h1>Form Basics</h1>
+    <p>Intermediate HTML and CSS Course</p>
+  </hgroup>
+
+  <ul>
+    <li>The Form Element</li>
+    <ul>
+      <li>Container Element</li>
+      <li>Wraps all of the inputs a user will interact with on a form</li>
+      <li>Accepts two essential attributes:</li>
+      <ol>
+        <li>action - takes a URL value that tells the form where it should send its data to be processed. (Hook backend systems up to a frontend forms using this attribute)</li>
+        <li>method - tells the browser which HTTP request methods it should use to submit the form</li>
+        <ul>
+          <li>GET - used when you want to retrieve something from a server. <br>Example: Google uses a GET request when you search </li>
+          <li>POST - used when you want to change something on the server. <br>Example: when a user makes an account or makes a payment on a website.</li>
+        </ul>
+      </ol>
+    </ul>
+    <li>Form Controls</li>
+    <ul>
+      <li>text boxes</li>
+      <li>dropdowns</li>
+      <li>checkboxes</li>
+      <li>buttons</li>
+    </ul>
+    <li>The input element - Accepts a type attribute which tells the browser what type of data it should expect & how it should render the input element</li>
+    <ul>
+      <li><span>Text input</span> - ('< input type="text" >') - accepts any text input</li>
+      <li><span>Labels</span> - ('< label for="">< /label>') input on its own isn't very useful if the user won't know what kind of data they are supposed to provide.<br>
+      Input associated with a label needs an 'id' attribute with the same value as the label's 'for' attribute
+      </li>
+      <li><span>Placeholder attribute</span> - can guide users on what to enter in form elements</li>
+      <li><span>Name attribute</span> - we use labels so users understand what data needs to be entered into an input field. We also need to let the backend, where we send our data, know what each piece of data represents.<br>
+      The name attribute serves as a reference to the data inputted into a form. A variable name for the input. Form input should always have a name attribute otherwise, it will be ignored when the form is submitted.</li>
+      <li><span>The specialized input type attributes</span></li>
+      <ol>
+        <li><span>Email inputs</span> - specialized text inputs just for email addresses</li>
+        <li><span>Password inputs</span> - specialized text input making the inputted data with another character, usually an asterisk or bullet point</li>
+        <li><span>Number inputs</span> - only accept number values and ignores any other characters the user tries to enter</li>
+        <li><span>Date input</span> - provides a better user experience for choosing dates by rendering a date picker calendar</li>
+        <li><span>Textarea</span> - an input box that can accept text that spans multiple lines. Can also be resized by user by clicking and dragging bottom right corner</li>
+        <ul>Textarea accept 2 unique attributes:
+          <li>rows (height)</li>
+          <li>cols (width)</li>
+        </ul>
+      </ol>
+    </ul>
+    <li>Selection elements - for users to select a value from a predefined list</li>
+    <ul>
+      <li>Select dropdown</li>
+      <ol>
+        <li>'< select ></li>
+        <li>'< option > - all opetion elements should have a value attribute</li>
+        <li>< optgroup > - can split the list of options into groups with</li>
+        <li>< label > - optgroup element takes a label attribute</li>
+        <li>Radio buttons - use when you have a smaller list of 5 or fewer.<br>
+        input type='radio'</li>
+        <li>< checked > - default selection of radio button & checkboxes</li>
+        <li>checkboxes - like radio buttons but alow multiple options to be selected at once. Can also use if we want users to toggle if they want something to be true or false. Like signing up to a newsletter.<br>
+        input type='checkbox'</li>
+      </ol>
+    </ul>
+    <li>Buttons - clickable elements users can interact with to submit forms or trigger other actions.</li>
+    <ul>
+      <li>use < button ></li>
+      <li>Button elements can also accept a type attribute. There are 3 types of buttons</li>
+      <ul>
+        <li>Submit buttons</li>
+        <li>Reset button</li>
+        <li>Generic button</li>
+      </ul>
+    </ul>
+  </ul>
+  <ul><p><strong>Organizing form elements</strong></p>
+    <li>Fieldset element - container element that allows us to group related form inputs into one logical unit. Use < fieldset >. Whatever form inputs you want grouped together go within the opening and closing fieldset tags</li>
+    <li>Legend - used to give field sets a heading or caption so the user can see what a grouping of inputs is for. Use < legend > elements with the test you want to display within it's opening and closing tags. A legend should always come right after an opening fieldset tag.</li>
+  </ul>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+:root {
+  --border-box: 1px solid rgb(36, 36, 36);
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, 50px);
+  margin: 0.5rem;
+}
+
+.box {
+  aspect-ratio: 1 / 1;
+  width: 50px;
+  border: 2px solid black;
+}
+
+.box.clicked {
+  background-color: black;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child {
+  height: 25px;
+  width: 25px;
+  background-color: green;
+  border: var(--border-box);
+}
+
+.parent {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+  border: var(--border-box);
+}
+
+.grandparent {
+  height: 75px;
+  width: 75px;
+  background-color: red;
+  border: var(--border-box);
+}
