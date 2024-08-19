@@ -47,10 +47,10 @@
 
 # Typecasting = the process of converting a variable from one data type to another. str(), int(), float(), bool()
 
-name = 'Que Code'
-age = 103
-gpa = 4.0
-is_student = False
+# name = 'Que Code'
+# age = 103
+# gpa = 4.0
+# is_student = False
 
 # type(name) #returns nothing. Needs to be printed.
 # print(type(name)) # <class 'str'>
