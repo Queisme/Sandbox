@@ -381,9 +381,39 @@
 # print(result)
 
 # Exercise - validate user input 
-# 1. username is no more thna 12 characters
+# 1. username is no more than 12 characters
 # 2. username must not contain spaces
 # 3. username must not contain digits
 
-user_name = input('Enter your user name: ')
+# username = input('Enter your user name: ')
 
+# if len(username) > 12:
+#   print('Username too long.')
+# elif not username.count(' ') == 0:
+#   print('Username must not contain spaces.')
+# elif not username.isalpha():
+#   print('Username must not contain digits.')
+# else:
+#   print(f'Welcome {username}')
+
+# indexing = accessing elements of a sequence using [] (indexing operator)
+#            [start : end : step]
+
+# credit_number = '123456789101112131415'
+
+# print(credit_number[:4]) #1234
+# print(credit_number[4:]) #56789101112131415
+# print(credit_number[-1]) #5 - from the back
+# print(credit_number[-2]) #1
+# print(credit_number[::2]) #13579012345
+
+# A program to get the last four digits of a credit card number
+
+# credit_number = '123456789101112'
+
+# last_digits = credit_number[-4:]
+# print(f'XXXX-XXXX-XXXX-{last_digits}')
+
+# # reverse characters in the string
+# reversed_number = credit_number[::-1]
+# print(f'Reversed credit number: {reversed_number}')
