@@ -417,3 +417,196 @@
 # # reverse characters in the string
 # reversed_number = credit_number[::-1]
 # print(f'Reversed credit number: {reversed_number}')
+
+# format specifiers = {value:flags} format a value based on what flags are inserted
+
+# .(number)f = round to that many decimal places
+# :(number) = allocate that many spaces
+# :03 = allocate and zero pad that many spaces
+# :< = left justify
+# :> = right justify
+# :^ = center align
+# :+ = use a plus sign to indicate positive value
+# := = place sign to leftmost position
+# :  = insert a space before positive numbers
+# :, = comma separator
+
+# price1 = 3000.14159
+# price2 = -9870.65
+# price3 = 1110.34
+
+# print(f'Price 1 is ${price1:+,.2f}')
+# print(f'Price 2 is ${price2:+,.2f}')
+# print(f'Price 3 is ${price3:+,.2f}')
+
+# while loop = execute some code WHILE some condition remains true
+
+# name = input('Enter your name: ')
+# age = int(input('Enter your age: '))
+
+# while name == '':
+#   print('You don`t have a name?')
+#   name = input('Enter your name: ')
+
+# print(f'Hellooooo, {name}!')
+
+# while age < 0:
+#   print("You didn't enter your age!")
+#   age = int(input('Enter your age: '))
+
+# print(f'You are {age} yours old!')
+
+# food = input('Enter a food you life (q to quit): ')
+
+# while not food == 'q':
+#   print(f'You like {food}')
+#   food = input('Enter another food you like (q to quit): ')
+# print("Ohhhh, I'm stuffed.")
+
+# num = int(input('Enter a number between 1 - 10: '))
+
+# while num < 1 or num > 10:
+#   print(f'{num} is not valid')
+#   num = int(input('Enter a number between 1 - 10: '))
+
+# print(f'Your number is: {num}')
+
+# Creating a compound interest calculator in Python
+
+# principle = 0
+# rate = 0
+# time = 0
+
+# while True:
+#   principle = float(input("Enter the principle amount: "))
+#   if principle < 0:
+#     print("Principle can't be less than zero.")
+#   else:
+#     break
+
+# while True:
+#   rate = float(input("Enter the interest rate: "))
+#   if rate < 0:
+#     print("Interest rate can't be less than zero.")
+#   else:
+#     break
+
+# while True:
+#   time = int(input("Enter the time in years: "))
+#   if time < 0:
+#     print("Time can't be less than zero.")
+#   else:
+#     break
+
+# total = principle * pow((1 + rate / 100), time)
+# print(f'Balance after {time} year(s): ${total:.2f}')
+
+# for loops = execute a block of code a fixed number of times.
+#             You can iterate over a range, string, sequence, etc.
+
+# creditCard = '1234-5678-9012-3456'
+
+# for x in range(2, 11, 2):
+#   print(x)
+
+# for x in creditCard:
+#   print(x)
+
+# for x in range(1, 21):
+#   if x == 13:
+#     break
+#   else: 
+#     print(x)
+
+# creating a countdown timer program
+
+# import time
+
+# my_time = int(input("Enter the time in seconds: "))
+
+# for x in range(my_time, 0, -1):
+#   seconds = x % 60
+#   minutes = int(x / 60) % 60
+#   hours = int(x / 3600)
+#   print(f"{hours:02}:{minutes:02}:{seconds:02}")
+#   time.sleep(1)
+
+# print("Time's up!")
+
+# nested loop = A loop within another loop (outer, inner)
+#               outer loop:
+#                 inner loop:
+
+# rows = int(input("Enter the # of rows: "))
+# columns = int(input("Enter the # of columns: "))
+# symbol = input('Enter a symbol to use: ')
+
+
+# for x in range(rows):
+#   for y in range(columns):
+#     print(symbol, end='')
+#   print()
+
+# collection = single "variable" used to store multiple values
+#   List = [] ordered and changeable. Duplicates are OK.
+#   Set = {} unordered and immutable, but Add/Remove OK. NO duplicates
+#   Tuple = () ordered and unchaneable. Duplicates OK. Faster.
+
+### List - Ordered & Changeable. Duplicates are OK.
+
+# fruits = ['apple', 'orange', 'banana', 'coconut']
+
+# print(fruits[::-1]) backwards
+
+#print(dir(fruits)) #to list the different attributes and methods avaliable to a collection
+#print(help(fruits)) #description of each attribute and method
+
+# print(len(fruits)) #length of collection - 4
+# print('apple' in fruits) #returns bool if values in collection - True
+# print('pineapple' in fruits) # False
+
+#fruits[0] = "grapes" #replaces 'apple'
+# fruits.append('pineapple') #adds item to end of list
+# fruits.remove('apple') #removes item
+# fruits.insert(0, 'mango') #at what index, then value
+# fruits.sort() #abc order
+# fruits.reverse() #reverses list
+# fruits.clear() #clears list
+# print(fruits.index('apple')) #0
+# print(fruits.count('banana')) #1
+
+# for fruit in fruits:
+#   print(fruit, end=" ")
+
+### Set - unordered & immutable, but Add/Remove elements Ok. No duplicates
+
+#fruits = {'apple', 'orange', 'banana', 'coconut'}
+
+#print(dir(fruits)) #to list the different attributes and methods avaliable to a collection
+#print(help(fruits)) #description of each attribute and method
+# print(len(fruits)) #4
+# print('pineapple' in fruits) #returns bool if values in collection - False
+
+# fruits.add('pineapple') #adds element
+# fruits.remove('apple') #removes element
+# fruits.pop() #removes whatever is first - will be random
+# fruits.clear() #clears the set
+
+# print(fruits) #unordered - will be in any order each time printed
+#for fruit in fruits:
+#  print(fruit)
+
+### Tuple - ordered and unchaneable. Duplicates OK. Faster.
+
+#fruits = ('apple', 'orange', 'banana', 'coconut', 'coconut')
+#print(dir(fruits)) - attributes & methods
+#print(help(fruits))
+#print(len(fruits)) #4
+#print('mango' in fruits) #returns bool if values in collection = False
+
+# print(fruits.index('banana')) #2
+# print(fruits.count('coconut')) #2
+
+#print(fruits)
+# for fruit in fruits:
+#   print(fruit)
