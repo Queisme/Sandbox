@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SQL - Structured Query Language</title>
+  </head>
+  <body>
+    <h1>SQL - Structured Query Language</h1>
+    <ul>
+      <p>Key SQL Statements</p>
+      <li>
+        <span>SELECT</span> - used to retrieve data from a database (Can be as
+        simple as selecting specific column from a table or as complex as
+        combining data from multiple tables based on logical relationships)
+        <ul>
+          <p>
+            SELECT basic syntax: begins with 'SELECT', followed by the columns
+            to retrieve, the 'FROM' clause indicating the table to query, and an
+            ~*optional*~ 'WHERE' to clause to filter records
+          </p>
+          <li>
+            SELECT column1, column2 FROM table_name<br />
+            WHERE condition;
+          </li>
+          <br />
+        </ul>
+      </li>
+      <li>
+        <span>INSERT INTO</span> - to add new records to a table (specifies the
+        table to insert the data into and the values to add)
+      </li>
+      <li>
+        <span>UPDATE</span> - to modify existing records (identifies the table
+        and the specific records to update, based on a condition, and specifies
+        the new values)
+      </li>
+      <li>
+        <span>DELETE</span> - to remove records from a table (removes records
+        that match a specified condition)
+      </li>
+    </ul>
+    <ul>
+      <p>Clauses and Conditions:</p>
+      <li>
+        <span>WHERE</span> - specifies a condition for filtering records and can
+        use logical operators to combine conditions
+      </li>
+      <ul>
+        <p>Logical Operators</p>
+        <li>AND</li>
+        <li>OR</li>
+        <li>NOT</li>
+        <br />
+      </ul>
+      <li>
+        <span>ORDER BY</span> - determines the order in which the results are
+        returned, based on one or more columns
+      </li>
+      <br />
+      <ul>
+        <li>ASC - ascending</li>
+        <li>DESC - descending</li>
+        <br />
+      </ul>
+      <li>
+        <span>GROUP BY</span> - aggregates rows that have the same values in
+        specified columns into summary rows
+      </li>
+      <ul>
+        <p>Examples:</p>
+        <li>sum</li>
+        <li>average</li>
+        <br />
+      </ul>
+      <li>
+        <span>HAVING</span> - similar to WHERE clause but used exclusively to
+        filter rows after they have been grouped.
+      </li>
+    </ul>
+    <ul>
+      <p>SQL Data Types</p>
+      <li>numeric</li>
+      <li>data and time</li>
+      <li>string (character and/or textual)</li>
+      <li>+more</li>
+    </ul>
+    <ul>
+      <p>Best Practices</p>
+      <li>always use explicit column names in your SELECT statements</li>
+      <li>use the WHERE clause to filter rows efficiently</li>
+      <li>
+        make use of comments to enhance readability and maintainability of your
+        SQL scripts
+      </li>
+    </ul>
+    <ul>
+      <p>The Difference Between SQL and NoSQL</p>
+      <li><span>SQL</span></li>
+      <li>
+        SQL databases - a.k.a relational databases - are structured in a way
+        that allows for the storage and retrieval of data in relation to other
+        data in said database
+      </li>
+      <ul>
+        <p>Examples of popular SQL databases</p>
+        <li>MySQL</li>
+        <li>PostgreSQL</li>
+        <li>Oracle</li>
+        <li>Microsoft SQL Server</li>
+        <br />
+        <li>
+          These systems are widely used in scenarios where data integrity and
+          relationships are crucial (ie: financial records, customer
+          relationship management (CRM) systems, and other applications where
+          transactions are complex and interconnected)
+        </li>
+        <br />
+      </ul>
+      <li>
+        These databases are table-bases, meaning data is organized into rows and
+        columns, where each row represents a record and each column represents a
+        data attribute
+      </li>
+      <li>
+        SQL - the language used to communicate with these databases is highly
+        structured allowing for complex queries and transactions
+      </li>
+      <li>
+        This structure ensures data integrity and relationships through
+        predefined schemas and rules (ie: foreign keys) which enforce the
+        relational aspect of the database.
+      </li>
+      <li>
+        SQL databases are traditionally scaled by enhancing the horse-power of
+        the hardware, known as vertical scaling, which can be expensive and has
+        physical limitations.
+      </li>
+      <br />
+      <li><span>NoSQL</span></li>
+      <li>
+        NoSQL databases are designed to handle a wide variety of data types
+      </li>
+      <ul>
+        <p>NoSQL data types:</p>
+        <li>structured</li>
+        <li>semi-structured</li>
+        <li>unstructured</li>
+      </ul>
+      <br />
+      <li>
+        NoSQL databases do not rely on a fixed table structure and are more
+        flexable which allows for easy storage and retrieval. This makes NoSQL
+        databases ideal for handling big data and real-time web applications.
+      </li>
+      <ul>
+        <p>Types of NoSQL databases</p>
+        <br />
+        each is optimized for specific kinds of data and use cases, from storing
+        large volumes of simple key-value pairs to efficiently managing highly
+        connected data for social networks or recommendation systems
+        <br />
+        <p>Document Databases</p>
+        <li>MongoDB</li>
+        <li>Couchbase</li>
+        <p>Key-value stores</p>
+        <li>Redis</li>
+        <li>DynamoDB</li>
+        <p>Wide-column stores</p>
+        <li>Cassandra</li>
+        <li>HBase</li>
+        <p>Graph database</p>
+        <li>Neo4j</li>
+        <li>Amazon Neptune</li>
+      </ul>
+      <br />
+      <li>
+        NoSQL databases are designed for horizontal scaling, which involves
+        adding more servers or nodes to the database system to handle larger
+        volumes of traffic and data. This scalability makes NoSQL databases
+        particularly suited to rapid growth and the varying demands ofmodern web
+        applications.
+      </li>
+    </ul>
+    <div class="conclusion">
+      In choosing between SQL and NoSQL, considerations include
+      <span
+        >the specific requirements of the application, the complexity of the
+        data relationships, scalability needs, and the expertise of the
+        development team</span
+      >. <br /><br />SQL databases are often preferred when
+      <span
+        >transactional integrity (ACID properties: Atomicity, Consistency,
+        Isolation, Durability) is paramount and the data structure is clear and
+        unlikely to change frequently</span
+      >.<br /><br />NoSQL databases, conversely,
+      <span
+        >offer more flexibility and scalability, which can be beneficial in
+        rapidly evolving environments where the data schema can change over
+        time</span
+      >.<br /><br />
+      Understanding the differences between SQL and NoSQL databases is essential
+      for anyone looking to efficiently store, manage, and analyze data. By
+      aligning database selection with the specific requirements and challenges
+      of each project, professionals can ensure robust, scalable, and effective
+      data management solutions.
+    </div>
+    <ul>
+      <p>Types of SQL Commands</p>
+      <li><span>Data Query Language (DQL)</span></li>
+      <ul>
+        <li>
+          <p>SELECT</p>
+          <br />
+          perhaps the most frquently used SQL command. Allows you to query the
+          db for specific info. you can use it to retrieve data from one or more
+          tables, filter records with specific conditions, +more. It's the
+          starting point for any data analysis task, enabling users to fetch and
+          aggregate data as required
+        </li>
+        <br />
+      </ul>
+      <li><span>Data Definition Language (DDL)</span></li>
+      <ul>
+        <li>
+          <p>CREATE</p>
+          <br />
+          creates new dbs, tables, or other db objects. Lays the foundation upon
+          which data will be stores and managed
+        </li>
+        <br />
+        <li>
+          <p>ALTER</p>
+          <br />
+          lets you modify the structure of an existing db object (ie. adding or
+          deleting columns in a table or changing a column's data type)
+        </li>
+        <br />
+        <li>
+          <p>DROP</p>
+          <br />
+          used to delete entire dbs, tables, or views. A powerful command that
+          should be used with caution as it removes objects and their data
+          permanently.
+        </li>
+        <br />
+        <li>
+          <p>TRUNCATE</p>
+          <br />
+          used to delete all records from a table while leaving the table
+          structure itself.
+        </li>
+      </ul>
+      <br />
+      <li><span>Data Manipulation Language (DML)</span></li>
+      <ul>
+        <li>
+          <p>INSERT</p>
+          <br />
+          used to add new records to a table. It allows specifying which values
+          will go into each column of the table for a new row.
+        </li>
+        <br />
+        <li>
+          <p>UPDATE</p>
+          <br />
+          used to modify existing records ina table. Can change the values in
+          one or more columns for all rows that meet certain criteria
+        </li>
+        <br />
+        <li>
+          <p>DELETE</p>
+          <br />
+          similar to TRUNCATE, DELETE removes rows from a table. However, it
+          offers more control, as you can specify exactly which rows to remove
+          based on certain conditions.
+        </li>
+        <br />
+      </ul>
+      <li><span>Data Control Language (DCL)</span></li>
+      <ul>
+        <li>
+          <p>GRANT</p>
+          <br />
+          allows specific users to perform specific tasks, like accessing,
+          modifying, and executing particular transactions on the db
+        </li>
+        <br />
+        <li>
+          <p>REVOKE</p>
+          <br />
+          takes back the permissions granted to the users, thus preventing them
+          from performing certain operations on the db objects
+        </li>
+        <br />
+      </ul>
+      <li><span>Transaction Control Language (TCL)</span></li>
+      <ul>
+        <li>
+          <p>COMMIT</p>
+          <br />
+          used to save all transactions made by DML statements like INSERT,
+          UPDATE, or DELETE since the last COMMIT or ROLLBACK
+        </li>
+        <br />
+        <li>
+          <p>ROLLBACK</p>
+          <br />
+          used to undo transactions that have not yet been committed, helping in
+          error handling and ensuring data integrity
+        </li>
+        <br />
+        <li>
+          <p>SAVEPOINT</p>
+          <br />
+          allows setting a point within a transaction to which you can later
+          rollback, providing a way to partially undo changes within a larger
+          transaction
+        </li>
+        <br />
+      </ul>
+    </ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>
