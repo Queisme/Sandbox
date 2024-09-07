@@ -1,0 +1,25 @@
+* {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  border: 1px solid rgb(199, 202, 0);
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: blue;
+  border: 1px solid rgb(0, 0, 124);
+  border-radius: 5px;
+  min-width: 100px;
+}
