@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "type": "chrome",
+      "name": "https://code.visualstudio.com/docs",
+      "request": "launch",
+      "url": "https://code.visualstudio.com/docs"
+    }
+  ]
+}
