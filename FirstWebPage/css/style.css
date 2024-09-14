@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url('https://fonts.googleapis.com/css?family=Metal+Mania');
+
+@font-face {
+  font-family: 'Booter - Zero Zero';
+  src: url(../fonts/BooterZeroZero.woff) format('woff'),
+    url(../fonts/BooterZeroZero.ttf) format('ttf');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Raleway;
+  color: #777;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul {
+  margin: 0;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 0.5em;
+  color: #777;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: rgba(153, 0, 255, 0.6);
+}
+
+.main-nav {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+
+.main-nav li {
+  padding: 0 5%;
+}
+
+.main-header {
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url('../img/header6.jpg');
+  background-size: cover;
+  background-position: 0;
+  background-blend-mode: multiply;
+  padding-bottom: 30px;
+}
+
+.band-name {
+  text-align: center;
+  margin: 0;
+  font-size: 4em;
+  font-weight: normal;
+  font-family: 'Booter - Zero Zero';
+  color: rgb(77, 77, 77);
+}
+
+.band-name-large {
+  font-size: 9em;
+}
+
+.content-section {
+  margin: 1em;
+}
+
+.content-section.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.section-header {
+  font-family: 'Metal Mania';
+  font-weight: normal;
+  color: #636363;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.about-band-img {
+  float: left;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 15px;
+}
+
+.about-band-img-right {
+  float: right;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 15px;
+}
+
+.footer-band-name {
+  color: black;
+  margin-left: 13px;
+}
+
+.main-footer {
+  margin-top: 3rem;
+  background-color: #8b8b8b;
+  color: black;
+  padding: 0.25em 0;
+}
+
+.main-footer-container {
+  display: flex;
+  align-items: center;
+}
+
+.main-footer-container ul {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.footer-nav li {
+  padding: 0 0.5em;
+}
+
+.footer-nav img {
+  width: 45px;
+  height: 45px;
+}
